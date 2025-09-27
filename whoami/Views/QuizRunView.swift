@@ -48,11 +48,18 @@ struct QuizRunView: View {
             Spacer()
         }
         .padding()
-        .navigationDestination(isPresented: $showResult) {
-            if let c = computed {
-                QuizResultView(quiz: quiz, result: c)
-            }
-        }
+                .background(
+            NavigationLink(
+                destination: Group {
+                    if let result = computed {
+                        QuizResultView(quiz: quiz, result: result)
+                    } else {
+                        EmptyView()
+                    }
+                },
+                isActive: $showResult
+            ) { EmptyView() }
+        )
     }
 
     private func goNext() {

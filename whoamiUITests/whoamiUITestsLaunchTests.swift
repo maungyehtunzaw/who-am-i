@@ -22,9 +22,13 @@ final class whoamiUITestsLaunchTests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        // Insert steps here to perform after app launch but before taking a screenshot,
-        // such as logging into a test account or navigating somewhere in the app
+        // Wait for app to fully load
+        let exists = NSPredicate(format: "exists == true")
+        let mainView = app.otherElements.firstMatch
+        expectation(for: exists, evaluatedWith: mainView, handler: nil)
+        waitForExpectations(timeout: 10, handler: nil)
 
+        // Take screenshot of launch screen
         let attachment = XCTAttachment(screenshot: app.screenshot())
         attachment.name = "Launch Screen"
         attachment.lifetime = .keepAlways

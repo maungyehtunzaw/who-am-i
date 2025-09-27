@@ -4,7 +4,7 @@
   "subtitle": "Find your inner pup personality 🐶",
   "category": "personality",
   "version": "1.1.0",
-  "cover_image": "assets/dogs/cover.webp",
+  "cover_image": "assets/dogs/cover.jpg",
   "types": [
     {
       "id": "labrador",
@@ -39,14 +39,14 @@
       "name": "Greyhound",
       "emoji": "⚪️🏃‍♂️",
       "description": "Chill minimalism meets bursts of speed. You’re sleek, efficient, and love your quiet time.",
-      "type_image": "assets/dogs/types/greyhound.jpg"
+      "type_image": "https://articles.hepper.com/wp-content/uploads/2021/11/shutterstock_523160830.jpg"
     },
     {
       "id": "poodle",
       "name": "Poodle",
       "emoji": "🎀🐩",
       "description": "Creative and particular with elegant taste. You enjoy order, aesthetics, and learning.",
-      "type_image": "assets/dogs/types/poodle.jpg"
+      "type_image": "https://media.istockphoto.com/id/1488541272/photo/cute-toy-poodle-sitting-on-white-background.jpg?s=612x612&w=0&k=20&c=g4mDp5Zki8T3HM7Rc_B1yYwXKS76XAW_OT7GDOdGbHk="
     }
   ],
   "questions": [

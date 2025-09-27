@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct QuizResultView: View {
     let quiz: Quiz
@@ -33,8 +34,17 @@ struct QuizResultView: View {
             }
             .buttonStyle(.borderedProminent)
 
-            ShareLink(item: shareText(), preview: SharePreview(quiz.title))
+            if #available(iOS 16.0, *) {
+                ShareLink(item: shareText(), preview: SharePreview(quiz.title))
+                    .buttonStyle(.bordered)
+            } else {
+                Button {
+                    shareResultLegacy()
+                } label: {
+                    Label("Share", systemImage: "square.and.arrow.up")
+                }
                 .buttonStyle(.bordered)
+            }
 
             NavigationLink("Done", destination: QuizListView())
                 .padding(.bottom)
@@ -45,5 +55,18 @@ struct QuizResultView: View {
 
     private func shareText() -> String {
         "I took '\(quiz.title)' and got \(result.winningType.name) \(result.winningType.emoji)!"
+    }
+    
+    private func shareResultLegacy() {
+        let activityVC = UIActivityViewController(activityItems: [shareText()], applicationActivities: nil)
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootViewController = windowScene.windows.first?.rootViewController {
+            var topController = rootViewController
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            topController.present(activityVC, animated: true, completion: nil)
+        }
     }
 }

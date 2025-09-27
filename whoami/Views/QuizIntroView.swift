@@ -87,11 +87,18 @@ struct QuizIntroView: View {
             lastRun = QuizStore.shared.loadLastRun(quizId: quiz.id)
         }
         .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(isPresented: $showResult) {
-            if let computedFromLast {
-                QuizResultView(quiz: quiz, result: computedFromLast)
-            }
-        }
+                .background(
+            NavigationLink(
+                destination: Group {
+                    if let result = computed {
+                        QuizResultView(quiz: quiz, result: result)
+                    } else {
+                        EmptyView()
+                    }
+                },
+                isActive: $showResult
+            ) { EmptyView() }
+        )
     }
 }
 

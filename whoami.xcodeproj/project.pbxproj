@@ -89,16 +89,6 @@
 			path = whoamiUITests;
 			sourceTree = "<group>";
 		};
-		5E15B78A2E87DDE4005096FA /* animals */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = animals;
-			sourceTree = "<group>";
-		};
-		5E15B7912E87DDE4005096FA /* dogs */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = dogs;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +157,6 @@
 				5E15B7482E87C55A005096FA /* Views */,
 				5E15B73B2E87C548005096FA /* Quizzes */,
 				5E15B73C2E87C548005096FA /* Assets.xcassets */,
-				5E15B78A2E87DDE4005096FA /* animals */,
-				5E15B7912E87DDE4005096FA /* dogs */,
 				5E15B73D2E87C548005096FA /* ContentView.swift */,
 				5E15B73E2E87C548005096FA /* Persistence.swift */,
 				5E15B73F2E87C548005096FA /* whoami.xcdatamodeld */,
@@ -224,9 +212,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				5E15B7912E87DDE4005096FA /* dogs */,
 			);
 			name = whoami;
 			packageProductDependencies = (
@@ -549,7 +534,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.6;
@@ -593,7 +578,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.6;
