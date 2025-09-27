@@ -1,0 +1,98 @@
+{
+  "id": "heroes",
+  "title": "Which Hero Archetype Are You?",
+  "subtitle": "Find your story role 🛡️",
+  "category": "personality",
+  "version": "1.1.0",
+  "cover_image": "assets/heroes/cover.jpg",
+  "types": [
+    { "id": "leader",    "name": "Leader",    "emoji": "👑", "description": "You inspire direction and make the tough calls when it matters.", "type_image": "assets/heroes/types/leader.jpg" },
+    { "id": "strategist","name": "Strategist","emoji": "🧠", "description": "You see the big picture, plan ahead, and win by thinking.", "type_image": "assets/heroes/types/strategist.jpg" },
+    { "id": "healer",    "name": "Healer",    "emoji": "💚", "description": "You mend, support, and restore — people trust you with their struggles.", "type_image": "assets/heroes/types/healer.jpg" },
+    { "id": "maverick",  "name": "Maverick",  "emoji": "⚡", "description": "You push boundaries, break rules, and spark change.", "type_image": "assets/heroes/types/maverick.jpg" },
+    { "id": "guardian",  "name": "Guardian",  "emoji": "🛡️", "description": "You protect what matters most — steadfast, loyal, and brave.", "type_image": "assets/heroes/types/guardian.jpg" },
+    { "id": "trickster", "name": "Trickster", "emoji": "🃏", "description": "You disrupt with humor and creativity, revealing new paths.", "type_image": "assets/heroes/types/trickster.jpg" }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "A friend calls for help last minute. You…",
+      "options": [
+        { "id": "a", "text": "Take charge and organize",         "scores": { "leader": 2 } },
+        { "id": "b", "text": "Map options and choose wisely",    "scores": { "strategist": 2 } },
+        { "id": "c", "text": "Show up with comfort and care",    "scores": { "healer": 2 } },
+        { "id": "d", "text": "Improvise a bold fix",             "scores": { "maverick": 2, "trickster": 1 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Your power-up item is…",
+      "options": [
+        { "id": "a", "text": "A banner others rally to",         "scores": { "leader": 2 } },
+        { "id": "b", "text": "A map that updates in real time",  "scores": { "strategist": 2 } },
+        { "id": "c", "text": "A healing charm",                  "scores": { "healer": 2 } },
+        { "id": "d", "text": "A wildcard token",                 "scores": { "trickster": 2, "maverick": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Pick a battlefield:",
+      "options": [
+        { "id": "a", "text": "The front line",     "scores": { "guardian": 2, "leader": 1 } },
+        { "id": "b", "text": "The command tent",   "scores": { "strategist": 2 } },
+        { "id": "c", "text": "The infirmary",      "scores": { "healer": 2 } },
+        { "id": "d", "text": "The shadows",        "scores": { "trickster": 2, "maverick": 1 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Your weakness might be…",
+      "options": [
+        { "id": "a", "text": "Stubborn pride",     "scores": { "leader": 1, "guardian": 1 } },
+        { "id": "b", "text": "Overthinking",       "scores": { "strategist": 2 } },
+        { "id": "c", "text": "Self-sacrifice",     "scores": { "healer": 2 } },
+        { "id": "d", "text": "Recklessness",       "scores": { "maverick": 2, "trickster": 1 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Pick a victory quote:",
+      "options": [
+        { "id": "a", "text": "“We move together.”", "scores": { "leader": 2, "guardian": 1 } },
+        { "id": "b", "text": "“Checkmate.”",        "scores": { "strategist": 2 } },
+        { "id": "c", "text": "“Everyone’s safe.”",  "scores": { "healer": 2, "guardian": 1 } },
+        { "id": "d", "text": "“Wasn’t that fun?”",  "scores": { "trickster": 2, "maverick": 1 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "In a new group you…",
+      "options": [
+        { "id": "a", "text": "Set direction quickly", "scores": { "leader": 2 } },
+        { "id": "b", "text": "Gauge dynamics first",  "scores": { "strategist": 2 } },
+        { "id": "c", "text": "Build trust and comfort","scores": { "healer": 2 } },
+        { "id": "d", "text": "Inject energy or humor", "scores": { "trickster": 2, "maverick": 1 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Your armor style:",
+      "options": [
+        { "id": "a", "text": "Regal and bold",        "scores": { "leader": 2 } },
+        { "id": "b", "text": "Light and tactical",    "scores": { "strategist": 2 } },
+        { "id": "c", "text": "With a crest of your circle", "scores": { "guardian": 2 } },
+        { "id": "d", "text": "Disguises and gadgets", "scores": { "trickster": 2, "maverick": 1 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "When stakes are high…",
+      "options": [
+        { "id": "a", "text": "Stand firm and protect", "scores": { "guardian": 2 } },
+        { "id": "b", "text": "Find a non-obvious path","scores": { "strategist": 2 } },
+        { "id": "c", "text": "Keep hearts steady",     "scores": { "healer": 2 } },
+        { "id": "d", "text": "Make the daring move",   "scores": { "maverick": 2, "leader": 1 } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "id": "dogs",
+  "title": "Which Kind of Dog Are You?",
+  "subtitle": "Find your inner pup personality 🐶",
+  "category": "personality",
+  "version": "1.1.0",
+  "cover_image": "assets/dogs/cover.webp",
+  "types": [
+    {
+      "id": "labrador",
+      "name": "Labrador",
+      "emoji": "🟡🐕",
+      "description": "Warm, loyal, and outgoing. You’re everyone’s best friend and bring sunshine into any room.",
+      "type_image": "assets/dogs/types/labrador.jpeg"
+    },
+    {
+      "id": "shiba",
+      "name": "Shiba Inu",
+      "emoji": "🧡🦊",
+      "description": "Independent and stylish. You know what you want and you love a bit of mystery.",
+      "type_image": "assets/dogs/types/shiba.jpg"
+    },
+    {
+      "id": "collie",
+      "name": "Border Collie",
+      "emoji": "⚫️⚪️🐕‍🦺",
+      "description": "Curious and quick-thinking. You thrive on challenges and love solving puzzles.",
+      "type_image": "assets/dogs/types/collie.webp"
+    },
+    {
+      "id": "bulldog",
+      "name": "Bulldog",
+      "emoji": "🤎🐶",
+      "description": "Calm, steady, and dependable. You value comfort, loyalty, and close friendships.",
+      "type_image": "assets/dogs/types/bulldog.jpg"
+    },
+    {
+      "id": "greyhound",
+      "name": "Greyhound",
+      "emoji": "⚪️🏃‍♂️",
+      "description": "Chill minimalism meets bursts of speed. You’re sleek, efficient, and love your quiet time.",
+      "type_image": "assets/dogs/types/greyhound.jpg"
+    },
+    {
+      "id": "poodle",
+      "name": "Poodle",
+      "emoji": "🎀🐩",
+      "description": "Creative and particular with elegant taste. You enjoy order, aesthetics, and learning.",
+      "type_image": "assets/dogs/types/poodle.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Your perfect weekend looks like…",
+      "question_image": "assets/dogs/questions/q1.jpg",
+      "options": [
+        {
+          "id": "a",
+          "text": "BBQ with friends",
+          "option_image": "assets/dogs/options/q1_a.jpg",
+          "scores": { "labrador": 2, "bulldog": 1 }
+        },
+        {
+          "id": "b",
+          "text": "Solo city photo walk",
+          "option_image": "assets/dogs/options/q1_b.jpg",
+          "scores": { "shiba": 2, "greyhound": 1 }
+        },
+        {
+          "id": "c",
+          "text": "A hackathon or brain teaser marathon",
+          "scores": { "collie": 2, "poodle": 1 }
+        },
+        {
+          "id": "d",
+          "text": "Spa day + naps",
+          "scores": { "bulldog": 2, "greyhound": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Pick a coffee style:",
+      "options": [
+        { "id": "a", "text": "Latte with art", "scores": { "poodle": 2, "labrador": 1 } },
+        { "id": "b", "text": "Espresso shot", "scores": { "shiba": 1, "greyhound": 2 } },
+        { "id": "c", "text": "Black coffee, no fuss", "scores": { "bulldog": 2, "collie": 1 } },
+        { "id": "d", "text": "Matcha or something new", "scores": { "collie": 2, "poodle": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "In a team, you’re usually…",
+      "options": [
+        { "id": "a", "text": "The friendly motivator", "scores": { "labrador": 2 } },
+        { "id": "b", "text": "The strategist behind the scenes", "scores": { "collie": 2, "poodle": 1 } },
+        { "id": "c", "text": "The calm stabilizer", "scores": { "bulldog": 2, "greyhound": 1 } },
+        { "id": "d", "text": "The stylish trend-setter", "scores": { "shiba": 2, "poodle": 1 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Choose a home vibe:",
+      "options": [
+        { "id": "a", "text": "Cozy and full of people", "scores": { "labrador": 2 } },
+        { "id": "b", "text": "Minimal and airy", "scores": { "greyhound": 2 } },
+        { "id": "c", "text": "Organized studio with plants", "scores": { "poodle": 2 } },
+        { "id": "d", "text": "Warm nook with books", "scores": { "bulldog": 2, "collie": 1 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Pick a superpower:",
+      "question_image": "assets/dogs/questions/q5.jpg",
+      "options": [
+        { "id": "a", "text": "Instant empathy", "scores": { "labrador": 2 } },
+        { "id": "b", "text": "Creative transformation", "option_image": "assets/dogs/options/q5_b.jpg", "scores": { "poodle": 2 } },
+        { "id": "c", "text": "Lightning problem-solving", "scores": { "collie": 2 } },
+        { "id": "d", "text": "Time dilation for naps", "scores": { "bulldog": 2, "greyhound": 1 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "What’s your cardio style?",
+      "options": [
+        { "id": "a", "text": "Sprints then chill", "scores": { "greyhound": 2 } },
+        { "id": "b", "text": "Dance or aerobics", "scores": { "labrador": 1, "poodle": 1 } },
+        { "id": "c", "text": "Hiking with friends", "scores": { "labrador": 2, "bulldog": 1 } },
+        { "id": "d", "text": "Puzzle walk (podcast + steps)", "scores": { "collie": 2 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Pick a motto:",
+      "options": [
+        { "id": "a", "text": "Kindness scales", "scores": { "labrador": 2 } },
+        { "id": "b", "text": "Less, but better", "scores": { "greyhound": 2 } },
+        { "id": "c", "text": "Curiosity wins", "scores": { "collie": 2 } },
+        { "id": "d", "text": "Comfort is power", "scores": { "bulldog": 2 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Your style is…",
+      "options": [
+        { "id": "a", "text": "Classic and friendly", "scores": { "labrador": 2 } },
+        { "id": "b", "text": "Clean and modern", "scores": { "greyhound": 2 } },
+        { "id": "c", "text": "Playful with details", "scores": { "poodle": 2 } },
+        { "id": "d", "text": "Minimal with a twist", "scores": { "shiba": 2 } }
+      ]
+    }
+  ]
+}

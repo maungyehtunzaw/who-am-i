@@ -1,0 +1,99 @@
+{
+  "id": "colors",
+  "title": "Which Color Are You?",
+  "subtitle": "Discover the hue that matches your energy 🎨",
+  "category": "personality",
+  "version": "1.1.0",
+  "cover_image": "assets/colors/cover.jpg",
+  "types": [
+    { "id": "red",    "name": "Red",    "emoji": "🟥", "description": "Bold, passionate, action-oriented. You bring energy and momentum.", "type_image": "assets/colors/types/red.jpg" },
+    { "id": "blue",   "name": "Blue",   "emoji": "🟦", "description": "Calm, reliable, thoughtful. People trust you with the big stuff.", "type_image": "assets/colors/types/blue.jpg" },
+    { "id": "green",  "name": "Green",  "emoji": "🟩", "description": "Balanced, kind, growth-minded. You nurture ideas and people.", "type_image": "assets/colors/types/green.jpg" },
+    { "id": "yellow", "name": "Yellow", "emoji": "🟨", "description": "Optimistic and curious. You spark creativity and laughter.", "type_image": "assets/colors/types/yellow.jpg" },
+    { "id": "purple", "name": "Purple", "emoji": "🟪", "description": "Imaginative, intuitive, a lover of meaning and mystery.", "type_image": "assets/colors/types/purple.jpg" }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Pick a morning vibe:",
+      "options": [
+        { "id": "a", "text": "Workout and go",           "scores": { "red": 2 } },
+        { "id": "b", "text": "Journal & plan",           "scores": { "blue": 2 } },
+        { "id": "c", "text": "Gardening or light stretch","scores": { "green": 2 } },
+        { "id": "d", "text": "Music and ideas",          "scores": { "yellow": 1, "purple": 1 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "In a group, you’re the…",
+      "question_image": "assets/colors/questions/q2.jpg",
+      "options": [
+        { "id": "a", "text": "Initiator",     "scores": { "red": 2 } },
+        { "id": "b", "text": "Listener",      "scores": { "blue": 2 } },
+        { "id": "c", "text": "Mediator",      "scores": { "green": 2 } },
+        { "id": "d", "text": "Idea-spark",    "scores": { "yellow": 2, "purple": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Pick a weekend plan:",
+      "options": [
+        { "id": "a", "text": "Adventure road trip",           "scores": { "red": 2, "yellow": 1 } },
+        { "id": "b", "text": "Museum/film + deep talks",      "scores": { "purple": 2, "blue": 1 } },
+        { "id": "c", "text": "Cook for friends",              "scores": { "green": 2 } },
+        { "id": "d", "text": "Tidy, read, recharge",          "scores": { "blue": 2 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "What motivates you most?",
+      "options": [
+        { "id": "a", "text": "Winning/achievement",   "scores": { "red": 2 } },
+        { "id": "b", "text": "Harmony/understanding", "scores": { "blue": 2, "green": 1 } },
+        { "id": "c", "text": "Growth/progress",       "scores": { "green": 2 } },
+        { "id": "d", "text": "Wonder/beauty",         "scores": { "purple": 2, "yellow": 1 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Choose a landscape:",
+      "options": [
+        { "id": "a", "text": "Sunrise on a summit", "scores": { "red": 2 } },
+        { "id": "b", "text": "Still lake at dusk",  "scores": { "blue": 2 } },
+        { "id": "c", "text": "Forest in spring",    "scores": { "green": 2 } },
+        { "id": "d", "text": "City lights at night","scores": { "purple": 2, "yellow": 1 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "Your desk is…",
+      "options": [
+        { "id": "a", "text": "Active chaos",      "scores": { "yellow": 2, "red": 1 } },
+        { "id": "b", "text": "Clean and ordered", "scores": { "blue": 2 } },
+        { "id": "c", "text": "Plants + cozy",     "scores": { "green": 2 } },
+        { "id": "d", "text": "A moodboard",       "scores": { "purple": 2 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Pick a mantra:",
+      "options": [
+        { "id": "a", "text": "Start before you’re ready", "scores": { "red": 2 } },
+        { "id": "b", "text": "Clarity first",             "scores": { "blue": 2 } },
+        { "id": "c", "text": "Small steps daily",         "scores": { "green": 2 } },
+        { "id": "d", "text": "Make it playful",           "scores": { "yellow": 2, "purple": 1 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Pick a creative tool:",
+      "question_image": "assets/colors/questions/q8.jpg",
+      "options": [
+        { "id": "a", "text": "Camera",     "scores": { "purple": 2 } },
+        { "id": "b", "text": "Notebook",   "scores": { "blue": 2 } },
+        { "id": "c", "text": "Whiteboard", "scores": { "red": 2 } },
+        { "id": "d", "text": "Garden shears","scores": { "green": 2 } }
+      ]
+    }
+  ]
+}

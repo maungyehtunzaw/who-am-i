@@ -1,0 +1,23 @@
+{
+  "package": "personality_quizzes_images_v2",
+  "updated_at": "2025-09-27T07:21:47.619518Z",
+  "schema_version": "1.1.0",
+  "quizzes": [
+    {
+      "id": "dogs",
+      "file": "quiz_dogs.json"
+    },
+    {
+      "id": "colors",
+      "file": "quiz_colors.json"
+    },
+    {
+      "id": "animals",
+      "file": "quiz_animals.json"
+    },
+    {
+      "id": "heroes",
+      "file": "quiz_heroes.json"
+    }
+  ]
+}

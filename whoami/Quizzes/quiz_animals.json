@@ -1,0 +1,98 @@
+{
+  "id": "animals",
+  "title": "Which Animal Are You?",
+  "subtitle": "Your spirit critter awaits 🐾",
+  "category": "personality",
+  "version": "1.1.0",
+  "cover_image": "assets/animals/cover.jpg",
+  "types": [
+    { "id": "fox",     "name": "Fox",     "emoji": "🦊", "description": "Clever and adaptable. You find paths where others see walls.", "type_image": "assets/animals/types/fox.jpg" },
+    { "id": "owl",     "name": "Owl",     "emoji": "🦉", "description": "Observant and wise. You notice patterns and think deeply.", "type_image": "assets/animals/types/owl.jpg" },
+    { "id": "dolphin", "name": "Dolphin", "emoji": "🐬", "description": "Social, playful, and empathetic. You lift the room.", "type_image": "assets/animals/types/dolphin.jpg" },
+    { "id": "bear",    "name": "Bear",    "emoji": "🐻", "description": "Grounded and strong. You value loyalty and safety.", "type_image": "assets/animals/types/bear.jpg" },
+    { "id": "cat",     "name": "Cat",     "emoji": "🐱", "description": "Independent, tasteful, and a touch mysterious.", "type_image": "assets/animals/types/cat.jpg" },
+    { "id": "wolf",    "name": "Wolf",    "emoji": "🐺", "description": "Loyal to your pack. Strategic, resilient, and determined.", "type_image": "assets/animals/types/wolf.jpg" }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Your ideal evening:",
+      "options": [
+        { "id": "a", "text": "Game night with friends", "scores": { "dolphin": 2, "wolf": 1 } },
+        { "id": "b", "text": "Reading + tea",           "scores": { "owl": 2, "cat": 1 } },
+        { "id": "c", "text": "A quiet walk",            "scores": { "fox": 2 } },
+        { "id": "d", "text": "Cooking a hearty meal",   "scores": { "bear": 2 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "When problems arise, you…",
+      "options": [
+        { "id": "a", "text": "Rally the team",                   "scores": { "wolf": 2, "dolphin": 1 } },
+        { "id": "b", "text": "Analyze quietly first",            "scores": { "owl": 2 } },
+        { "id": "c", "text": "Try something unconventional",     "scores": { "fox": 2, "cat": 1 } },
+        { "id": "d", "text": "Secure the basics and protect others","scores": { "bear": 2 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Pick a landscape:",
+      "options": [
+        { "id": "a", "text": "Moonlit forest",  "scores": { "owl": 2 } },
+        { "id": "b", "text": "Rocky coastline", "scores": { "fox": 2 } },
+        { "id": "c", "text": "Snowy mountains", "scores": { "wolf": 2, "bear": 1 } },
+        { "id": "d", "text": "Sunny bay",       "scores": { "dolphin": 2 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Choose a skill to master:",
+      "options": [
+        { "id": "a", "text": "Reading people",     "scores": { "dolphin": 2 } },
+        { "id": "b", "text": "Strategy & timing",  "scores": { "wolf": 2, "fox": 1 } },
+        { "id": "c", "text": "Pattern recognition","scores": { "owl": 2 } },
+        { "id": "d", "text": "Patience & endurance","scores": { "bear": 2 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Your workspace is…",
+      "options": [
+        { "id": "a", "text": "Cozy corner",           "scores": { "cat": 2 } },
+        { "id": "b", "text": "A tactical map",        "scores": { "wolf": 2 } },
+        { "id": "c", "text": "Play zone for ideas",   "scores": { "dolphin": 2 } },
+        { "id": "d", "text": "Minimal & sharp",       "scores": { "fox": 2 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "Pick a motto:",
+      "options": [
+        { "id": "a", "text": "Quiet power",            "scores": { "bear": 2, "owl": 1 } },
+        { "id": "b", "text": "Stay curious",           "scores": { "fox": 2 } },
+        { "id": "c", "text": "Together we go far",     "scores": { "wolf": 2, "dolphin": 1 } },
+        { "id": "d", "text": "Taste matters",          "scores": { "cat": 2 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Your social battery:",
+      "options": [
+        { "id": "a", "text": "Energized by people",          "scores": { "dolphin": 2 } },
+        { "id": "b", "text": "Balanced — depends on the day","scores": { "fox": 1, "wolf": 1, "cat": 1 } },
+        { "id": "c", "text": "Prefer small circles",         "scores": { "owl": 2, "bear": 1 } },
+        { "id": "d", "text": "Solo is sacred time",          "scores": { "cat": 2 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Pick a creative tool:",
+      "options": [
+        { "id": "a", "text": "Camera",       "scores": { "fox": 2 } },
+        { "id": "b", "text": "Notebook",     "scores": { "owl": 2 } },
+        { "id": "c", "text": "Audio mixer",  "scores": { "dolphin": 2 } },
+        { "id": "d", "text": "Forge/woodshop","scores": { "bear": 2 } }
+      ]
+    }
+  ]
+}
