@@ -90,7 +90,7 @@ struct QuizIntroView: View {
                 .background(
             NavigationLink(
                 destination: Group {
-                    if let result = computed {
+                    if let result = computedFromLast {
                         QuizResultView(quiz: quiz, result: result)
                     } else {
                         EmptyView()
