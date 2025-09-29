@@ -1,0 +1,316 @@
+{
+  "id": "mbti",
+  "title": "Which MBTI Type Are You?",
+  "subtitle": "Discover your 16-type personality 🧩",
+  "category": "personality",
+  "version": "1.0.0",
+  "cover_image": "assets/mbti/cover.jpg",
+  "types": [
+    {
+      "id": "intj",
+      "name": "Architect (INTJ)",
+      "emoji": "🧠",
+      "description": "Imaginative and strategic thinkers, with a plan for everything.",
+      "type_image": "assets/mbti/types/intj.jpg"
+    },
+    {
+      "id": "intp",
+      "name": "Logician (INTP)",
+      "emoji": "📚",
+      "description": "Innovative inventors with an unquenchable thirst for knowledge.",
+      "type_image": "assets/mbti/types/intp.jpg"
+    },
+    {
+      "id": "entj",
+      "name": "Commander (ENTJ)",
+      "emoji": "🎯",
+      "description": "Bold, imaginative and strong-willed leaders, always finding a way.",
+      "type_image": "assets/mbti/types/entj.jpg"
+    },
+    {
+      "id": "entp",
+      "name": "Debater (ENTP)",
+      "emoji": "💬",
+      "description": "Smart and curious thinkers who cannot resist an intellectual challenge.",
+      "type_image": "assets/mbti/types/entp.jpg"
+    },
+    {
+      "id": "infj",
+      "name": "Advocate (INFJ)",
+      "emoji": "🌱",
+      "description": "Quiet and mystical, yet very inspiring and tireless idealists.",
+      "type_image": "assets/mbti/types/infj.jpg"
+    },
+    {
+      "id": "infp",
+      "name": "Mediator (INFP)",
+      "emoji": "🕊️",
+      "description": "Poetic, kind and altruistic people, always eager to help a good cause.",
+      "type_image": "assets/mbti/types/infp.jpg"
+    },
+    {
+      "id": "enfj",
+      "name": "Protagonist (ENFJ)",
+      "emoji": "🌟",
+      "description": "Charismatic and inspiring leaders, able to mesmerize their listeners.",
+      "type_image": "assets/mbti/types/enfj.jpg"
+    },
+    {
+      "id": "enfp",
+      "name": "Campaigner (ENFP)",
+      "emoji": "🎉",
+      "description": "Enthusiastic, creative and sociable free spirits, who can always find a reason to smile.",
+      "type_image": "assets/mbti/types/enfp.jpg"
+    },
+    {
+      "id": "istj",
+      "name": "Logistician (ISTJ)",
+      "emoji": "🗂️",
+      "description": "Practical and fact-minded individuals, whose reliability cannot be doubted.",
+      "type_image": "assets/mbti/types/istj.jpg"
+    },
+    {
+      "id": "isfj",
+      "name": "Defender (ISFJ)",
+      "emoji": "🛡️",
+      "description": "Very dedicated and warm protectors, always ready to defend loved ones.",
+      "type_image": "assets/mbti/types/isfj.jpg"
+    },
+    {
+      "id": "estj",
+      "name": "Executive (ESTJ)",
+      "emoji": "⚖️",
+      "description": "Excellent administrators, unsurpassed at managing things – or people.",
+      "type_image": "assets/mbti/types/estj.jpg"
+    },
+    {
+      "id": "esfj",
+      "name": "Consul (ESFJ)",
+      "emoji": "🤝",
+      "description": "Extraordinarily caring, social and popular people, always eager to help.",
+      "type_image": "assets/mbti/types/esfj.jpg"
+    },
+    {
+      "id": "istp",
+      "name": "Virtuoso (ISTP)",
+      "emoji": "🔧",
+      "description": "Bold and practical experimenters, masters of all kinds of tools.",
+      "type_image": "assets/mbti/types/istp.jpg"
+    },
+    {
+      "id": "isfp",
+      "name": "Adventurer (ISFP)",
+      "emoji": "🎨",
+      "description": "Flexible and charming artists, always ready to explore and experience something new.",
+      "type_image": "assets/mbti/types/isfp.jpg"
+    },
+    {
+      "id": "estp",
+      "name": "Entrepreneur (ESTP)",
+      "emoji": "🚀",
+      "description": "Smart, energetic and very perceptive people, who truly enjoy living on the edge.",
+      "type_image": "assets/mbti/types/estp.jpg"
+    },
+    {
+      "id": "esfp",
+      "name": "Entertainer (ESFP)",
+      "emoji": "🎭",
+      "description": "Spontaneous, energetic and enthusiastic people – life is never boring around them.",
+      "type_image": "assets/mbti/types/esfp.jpg"
+    }
+  ],
+  "questions": [
+    { "id": "q1", "text": "At a party you usually…",
+      "options": [
+        { "id": "a", "text": "Mingle with many people, meet new faces.", "scores": { "E": 2 } },
+        { "id": "b", "text": "Stick with a few, find a quiet spot.", "scores": { "I": 2 } }
+      ]
+    },
+    { "id": "q2", "text": "You prefer information that is…",
+      "options": [
+        { "id": "a", "text": "Concrete, practical, based on facts.", "scores": { "S": 2 } },
+        { "id": "b", "text": "Abstract, big-picture, pattern-oriented.", "scores": { "N": 2 } }
+      ]
+    },
+    { "id": "q3", "text": "When making decisions, you lean toward…",
+      "options": [
+        { "id": "a", "text": "Objective logic and principles.", "scores": { "T": 2 } },
+        { "id": "b", "text": "Values and impact on people.", "scores": { "F": 2 } }
+      ]
+    },
+    { "id": "q4", "text": "Your planning style is…",
+      "options": [
+        { "id": "a", "text": "Organized, scheduled, decided.", "scores": { "J": 2 } },
+        { "id": "b", "text": "Flexible, spontaneous, open-ended.", "scores": { "P": 2 } }
+      ]
+    },
+    { "id": "q5", "text": "Social energy after a long day:",
+      "options": [
+        { "id": "a", "text": "Recharge with people or activities.", "scores": { "E": 2 } },
+        { "id": "b", "text": "Recharge alone or with one close friend.", "scores": { "I": 2 } }
+      ]
+    },
+    { "id": "q6", "text": "Details vs possibilities:",
+      "options": [
+        { "id": "a", "text": "Notice what’s here now; details matter.", "scores": { "S": 2 } },
+        { "id": "b", "text": "Imagine what could be; ideas first.", "scores": { "N": 2 } }
+      ]
+    },
+    { "id": "q7", "text": "Conflict resolution:",
+      "options": [
+        { "id": "a", "text": "Be direct, analyze, fix the issue.", "scores": { "T": 2 } },
+        { "id": "b", "text": "Seek harmony, consider feelings.", "scores": { "F": 2 } }
+      ]
+    },
+    { "id": "q8", "text": "Deadlines:",
+      "options": [
+        { "id": "a", "text": "Plan early, finish ahead of time.", "scores": { "J": 2 } },
+        { "id": "b", "text": "Work best close to the deadline.", "scores": { "P": 2 } }
+      ]
+    },
+    { "id": "q9", "text": "Weekend vibes:",
+      "options": [
+        { "id": "a", "text": "Out and about—events, sports, friends.", "scores": { "E": 2 } },
+        { "id": "b", "text": "Home base—reading, hobbies, a few people.", "scores": { "I": 2 } }
+      ]
+    },
+    { "id": "q10", "text": "Learning style:",
+      "options": [
+        { "id": "a", "text": "Hands-on, step-by-step examples.", "scores": { "S": 2 } },
+        { "id": "b", "text": "Concepts first, then applications.", "scores": { "N": 2 } }
+      ]
+    },
+    { "id": "q11", "text": "In feedback you value…",
+      "options": [
+        { "id": "a", "text": "Clear logic, what to fix and why.", "scores": { "T": 2 } },
+        { "id": "b", "text": "Encouragement and impact on people.", "scores": { "F": 2 } }
+      ]
+    },
+    { "id": "q12", "text": "Project approach:",
+      "options": [
+        { "id": "a", "text": "Make a plan, follow the plan.", "scores": { "J": 2 } },
+        { "id": "b", "text": "Explore options, keep it adaptable.", "scores": { "P": 2 } }
+      ]
+    },
+    { "id": "q13", "text": "Networking:",
+      "options": [
+        { "id": "a", "text": "Energizing—lots of new connections.", "scores": { "E": 2 } },
+        { "id": "b", "text": "Draining—prefer deeper, fewer chats.", "scores": { "I": 2 } }
+      ]
+    },
+    { "id": "q14", "text": "Memory tends to store…",
+      "options": [
+        { "id": "a", "text": "Specific facts and experiences.", "scores": { "S": 2 } },
+        { "id": "b", "text": "Themes, concepts, meanings.", "scores": { "N": 2 } }
+      ]
+    },
+    { "id": "q15", "text": "When friends ask advice, you…",
+      "options": [
+        { "id": "a", "text": "Offer objective pros and cons.", "scores": { "T": 2 } },
+        { "id": "b", "text": "Focus on values and support.", "scores": { "F": 2 } }
+      ]
+    },
+    { "id": "q16", "text": "Your calendar is…",
+      "options": [
+        { "id": "a", "text": "Booked and tidy.", "scores": { "J": 2 } },
+        { "id": "b", "text": "Loose, with room for surprises.", "scores": { "P": 2 } }
+      ]
+    },
+    { "id": "q17", "text": "After a busy week:",
+      "options": [
+        { "id": "a", "text": "Go out—concert, dinner, party.", "scores": { "E": 2 } },
+        { "id": "b", "text": "Recharge quietly—movie, game, book.", "scores": { "I": 2 } }
+      ]
+    },
+    { "id": "q18", "text": "When building something new you…",
+      "options": [
+        { "id": "a", "text": "Replicate proven patterns first.", "scores": { "S": 2 } },
+        { "id": "b", "text": "Invent a novel approach.", "scores": { "N": 2 } }
+      ]
+    },
+    { "id": "q19", "text": "During debates you value…",
+      "options": [
+        { "id": "a", "text": "Strong arguments and evidence.", "scores": { "T": 2 } },
+        { "id": "b", "text": "Respect and shared understanding.", "scores": { "F": 2 } }
+      ]
+    },
+    { "id": "q20", "text": "Travel planning:",
+      "options": [
+        { "id": "a", "text": "Itineraries, bookings, timing.", "scores": { "J": 2 } },
+        { "id": "b", "text": "Play it by ear, decide on the go.", "scores": { "P": 2 } }
+      ]
+    },
+    { "id": "q21", "text": "Group size preference:",
+      "options": [
+        { "id": "a", "text": "The more the merrier.", "scores": { "E": 2 } },
+        { "id": "b", "text": "Few close connections.", "scores": { "I": 2 } }
+      ]
+    },
+    { "id": "q22", "text": "Your attention goes to…",
+      "options": [
+        { "id": "a", "text": "What is—facts, data, present.", "scores": { "S": 2 } },
+        { "id": "b", "text": "What could be—ideas, future.", "scores": { "N": 2 } }
+      ]
+    },
+    { "id": "q23", "text": "In tough choices you trust…",
+      "options": [
+        { "id": "a", "text": "Head—logic, fairness.", "scores": { "T": 2 } },
+        { "id": "b", "text": "Heart—values, empathy.", "scores": { "F": 2 } }
+      ]
+    },
+    { "id": "q24", "text": "Tasks feel best when…",
+      "options": [
+        { "id": "a", "text": "Done and checked off.", "scores": { "J": 2 } },
+        { "id": "b", "text": "Open to revisit and iterate.", "scores": { "P": 2 } }
+      ]
+    },
+    { "id": "q25", "text": "Introductions are…",
+      "options": [
+        { "id": "a", "text": "Easy and fun.", "scores": { "E": 2 } },
+        { "id": "b", "text": "A bit draining.", "scores": { "I": 2 } }
+      ]
+    },
+    { "id": "q26", "text": "You trust more:",
+      "options": [
+        { "id": "a", "text": "My five senses.", "scores": { "S": 2 } },
+        { "id": "b", "text": "My intuition.", "scores": { "N": 2 } }
+      ]
+    },
+    { "id": "q27", "text": "Praise that lands for you:",
+      "options": [
+        { "id": "a", "text": "“Sharp logic and results.”", "scores": { "T": 2 } },
+        { "id": "b", "text": "“Great teammate and care.”", "scores": { "F": 2 } }
+      ]
+    },
+    { "id": "q28", "text": "When plans change suddenly…",
+      "options": [
+        { "id": "a", "text": "Frustrating—prefer stability.", "scores": { "J": 2 } },
+        { "id": "b", "text": "Exciting—new possibilities.", "scores": { "P": 2 } }
+      ]
+    },
+    { "id": "q29", "text": "Your ideal workspace:",
+      "options": [
+        { "id": "a", "text": "Organized, tools at hand.", "scores": { "E": 1, "J": 1, "S": 1 } },
+        { "id": "b", "text": "Flexible, creative nook.", "scores": { "I": 1, "P": 1, "N": 1 } }
+      ]
+    },
+    { "id": "q30", "text": "You’re more often called…",
+      "options": [
+        { "id": "a", "text": "Objective and frank.", "scores": { "T": 2 } },
+        { "id": "b", "text": "Warm and considerate.", "scores": { "F": 2 } }
+      ]
+    },
+    { "id": "q31", "text": "Your email style:",
+      "options": [
+        { "id": "a", "text": "Short, bullet points, direct.", "scores": { "J": 1, "T": 1, "S": 1 } },
+        { "id": "b", "text": "Context, tone, friendly closers.", "scores": { "P": 1, "F": 1, "N": 1 } }
+      ]
+    },
+    { "id": "q32", "text": "When you meet someone new you first notice…",
+      "options": [
+        { "id": "a", "text": "Facts: job, place, specifics.", "scores": { "S": 2 } },
+        { "id": "b", "text": "Vibe: values, possibilities.", "scores": { "N": 2 } }
+      ]
+    }
+  ]
+}

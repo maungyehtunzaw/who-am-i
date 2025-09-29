@@ -4,7 +4,7 @@
   "subtitle": "Find your story role 🛡️",
   "category": "personality",
   "version": "1.1.0",
-  "cover_image": "assets/heroes/cover.jpg",
+  "cover_image": "https://www.caelesteparfums.com/wp-content/uploads/2024/04/Caeleste-Guardian-Angel-scaled.jpg",
   "types": [
     { "id": "leader",    "name": "Leader",    "emoji": "👑", "description": "You inspire direction and make the tough calls when it matters.", "type_image": "assets/heroes/types/leader.jpg" },
     { "id": "strategist","name": "Strategist","emoji": "🧠", "description": "You see the big picture, plan ahead, and win by thinking.", "type_image": "assets/heroes/types/strategist.jpg" },
