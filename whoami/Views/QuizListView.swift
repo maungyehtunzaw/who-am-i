@@ -32,10 +32,14 @@ struct QuizListView: View {
                     HStack(spacing: 12) {
                         ImageProvider.image(quiz.cover_image)
                             .scaledToFill()
+                            .frame(width: 60, height: 60)
+                            .clipped()
+                            .cornerRadius(8)
                         VStack(alignment: .leading, spacing: 4) {
                             Text(quiz.title).font(.headline)
                             Text(quiz.subtitle).font(.subheadline).foregroundStyle(.secondary)
                         }
+                        Spacer()
                     }
                     .padding(.vertical, 4)
                 }

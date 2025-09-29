@@ -4,7 +4,7 @@
   "subtitle": "Discover your 16-type personality 🧩",
   "category": "personality",
   "version": "1.0.0",
-  "cover_image": "assets/mbti/cover.jpg",
+  "cover_image": "https://images.saymedia-content.com/.image/t_share/MTkyNzEyNTUzMjQ2NTY1NTc2/the-validity-of-the-mbti-personality-test.jpg",
   "types": [
     {
       "id": "intj",

@@ -22,14 +22,7 @@ struct QuizResultView: View {
             Text(result.winningType.description).multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
 
-            Spacer()
-
-            Button {
-                QuizStore.shared.saveResult(quizId: quiz.id, typeId: result.winningType.id)
-            } label: {
-                Label("Save to Stats", systemImage: "tray.and.arrow.down")
-            }
-            .buttonStyle(.borderedProminent)
+           
 
             if #available(iOS 16.0, *) {
                 ShareLink(item: shareText(), preview: SharePreview(quiz.title))

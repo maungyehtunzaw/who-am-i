@@ -1,0 +1,202 @@
+{
+  "id": "emoji",
+  "title": "Which Emoji Are You?",
+  "subtitle": "Find the emoji that matches your vibe 😎✨",
+  "category": "personality",
+  "version": "1.0.0",
+  "cover_image": "https://img.buzzfeed.com/buzzfeed-static/static/2019-09/4/18/tmp/c43f5483c6b2/90e1ef16d80b30b2a43499bc2dc08da1-0.png",
+  "types": [
+    {
+      "id": "joy",
+      "name": "Face with Tears of Joy",
+      "emoji": "😂",
+      "description": "Playful, hilarious, meme-core energy. You lighten every room.",
+      "type_image": "assets/emoji/types/joy.jpg"
+    },
+    {
+      "id": "heart",
+      "name": "Red Heart",
+      "emoji": "❤️",
+      "description": "Warm, loyal, and caring. You lead with kindness and connection.",
+      "type_image": "assets/emoji/types/heart.jpg"
+    },
+    {
+      "id": "fire",
+      "name": "Fire",
+      "emoji": "🔥",
+      "description": "Ambitious and high-energy. When you commit, you go all in.",
+      "type_image": "assets/emoji/types/fire.jpg"
+    },
+    {
+      "id": "sparkles",
+      "name": "Sparkles",
+      "emoji": "✨",
+      "description": "Optimistic, whimsical, and aesthetic-minded. You add polish to everything.",
+      "type_image": "assets/emoji/types/sparkles.jpg"
+    },
+    {
+      "id": "sunglasses",
+      "name": "Smiling Face with Sunglasses",
+      "emoji": "😎",
+      "description": "Chill confidence. You stay cool under pressure and keep things fun.",
+      "type_image": "assets/emoji/types/sunglasses.jpg"
+    },
+    {
+      "id": "pleading",
+      "name": "Pleading Face",
+      "emoji": "🥺",
+      "description": "Sweet, gentle, and persuasive. People find it hard to say no to you.",
+      "type_image": "assets/emoji/types/pleading.jpg"
+    },
+    {
+      "id": "party",
+      "name": "Partying Face",
+      "emoji": "🥳",
+      "description": "Celebratory and social. You’re the spark that gets everyone together.",
+      "type_image": "assets/emoji/types/party.jpg"
+    },
+    {
+      "id": "thinking",
+      "name": "Thinking Face",
+      "emoji": "🤔",
+      "description": "Curious analyst. You ask smart questions and love solving puzzles.",
+      "type_image": "assets/emoji/types/thinking.jpg"
+    },
+    {
+      "id": "loudly_crying",
+      "name": "Loudly Crying Face",
+      "emoji": "😭",
+      "description": "Big feelings, big reactions—dramatic in the best way. You feel deeply.",
+      "type_image": "assets/emoji/types/loudly_crying.jpg"
+    },
+    {
+      "id": "nerd",
+      "name": "Nerd Face",
+      "emoji": "🤓",
+      "description": "Enthusiastic learner, detail lover, wholesome geek chic.",
+      "type_image": "assets/emoji/types/nerd.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Someone drops a hilarious meme in chat. You reply with…",
+      "options": [
+        { "id": "a", "text": "I wheeze-laugh and can’t stop.", "scores": { "joy": 2, "party": 1 } },
+        { "id": "b", "text": "A sweet hype-up: love you all.", "scores": { "heart": 2, "sparkles": 1 } },
+        { "id": "c", "text": "A cool one-liner.", "scores": { "sunglasses": 2, "fire": 1 } },
+        { "id": "d", "text": "Hmm… why is it funny? I analyze it.", "scores": { "thinking": 2, "nerd": 1 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Weekend plan you’re excited about:",
+      "options": [
+        { "id": "a", "text": "Party or event with friends.", "scores": { "party": 2, "joy": 1 } },
+        { "id": "b", "text": "Helping someone or quality time.", "scores": { "heart": 2, "pleading": 1 } },
+        { "id": "c", "text": "New challenge, gym PR, launch day.", "scores": { "fire": 2, "sunglasses": 1 } },
+        { "id": "d", "text": "Rabbit-hole a topic for hours.", "scores": { "nerd": 2, "thinking": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "How do you react to surprises?",
+      "options": [
+        { "id": "a", "text": "Big emotions—tears, screams, all of it.", "scores": { "loudly_crying": 2, "joy": 1 } },
+        { "id": "b", "text": "A sparkle of delight; aesthetic pics.", "scores": { "sparkles": 2, "heart": 1 } },
+        { "id": "c", "text": "Keep it cool—play it smooth.", "scores": { "sunglasses": 2 } },
+        { "id": "d", "text": "Process, then respond thoughtfully.", "scores": { "thinking": 2 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "You’re best known for…",
+      "options": [
+        { "id": "a", "text": "Turning moments into celebrations.", "scores": { "party": 2 } },
+        { "id": "b", "text": "Being the supportive friend.", "scores": { "heart": 2, "pleading": 1 } },
+        { "id": "c", "text": "Getting results—rising to the occasion.", "scores": { "fire": 2 } },
+        { "id": "d", "text": "Sharing smart takes and guides.", "scores": { "nerd": 2, "thinking": 1 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Pick a caption style:",
+      "options": [
+        { "id": "a", "text": "Unhinged funny.", "scores": { "joy": 2 } },
+        { "id": "b", "text": "Clean & ✨aesthetic✨.", "scores": { "sparkles": 2 } },
+        { "id": "c", "text": "Short, confident, cool.", "scores": { "sunglasses": 2 } },
+        { "id": "d", "text": "Wholesome & heartfelt.", "scores": { "heart": 2 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "A friend asks for help last minute. You…",
+      "options": [
+        { "id": "a", "text": "Drop everything and cheerlead.", "scores": { "heart": 2, "party": 1 } },
+        { "id": "b", "text": "Strategize and execute fast.", "scores": { "fire": 2 } },
+        { "id": "c", "text": "Research resources to send.", "scores": { "nerd": 2, "thinking": 1 } },
+        { "id": "d", "text": "Deploy the cutest plea so others help too.", "scores": { "pleading": 2 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "Your vibe in a group chat:",
+      "options": [
+        { "id": "a", "text": "Chief meme officer.", "scores": { "joy": 2, "party": 1 } },
+        { "id": "b", "text": "Warm hug energy.", "scores": { "heart": 2, "pleading": 1 } },
+        { "id": "c", "text": "Cool curator of links & wins.", "scores": { "sunglasses": 2, "fire": 1 } },
+        { "id": "d", "text": "Context, summaries, fact-checks.", "scores": { "thinking": 2, "nerd": 1 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "A setback hits. You…",
+      "options": [
+        { "id": "a", "text": "Feel it all—then bounce back.", "scores": { "loudly_crying": 2, "joy": 1 } },
+        { "id": "b", "text": "Find the lesson and retry.", "scores": { "thinking": 2, "fire": 1 } },
+        { "id": "c", "text": "Stay positive; tidy and try again.", "scores": { "sparkles": 2 } },
+        { "id": "d", "text": "Call friends and make it social.", "scores": { "party": 2 } }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "Pick a motto:",
+      "options": [
+        { "id": "a", "text": "If it’s not fun, make it fun.", "scores": { "party": 2, "joy": 1 } },
+        { "id": "b", "text": "Lead with love.", "scores": { "heart": 2 } },
+        { "id": "c", "text": "Cool heads, hot results.", "scores": { "sunglasses": 2, "fire": 1 } },
+        { "id": "d", "text": "Think twice, act once.", "scores": { "thinking": 2, "nerd": 1 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "Choose an accessory:",
+      "options": [
+        { "id": "a", "text": "Confetti cannon.", "scores": { "party": 2 } },
+        { "id": "b", "text": "Designer shades.", "scores": { "sunglasses": 2 } },
+        { "id": "c", "text": "Cute plushie keychain.", "scores": { "pleading": 2 } },
+        { "id": "d", "text": "Notebook with tabs.", "scores": { "nerd": 2 } }
+      ]
+    },
+    {
+      "id": "q11",
+      "text": "What do people thank you for most?",
+      "options": [
+        { "id": "a", "text": "Making them laugh.", "scores": { "joy": 2 } },
+        { "id": "b", "text": "Being there with heart.", "scores": { "heart": 2 } },
+        { "id": "c", "text": "Getting them fired up.", "scores": { "fire": 2 } },
+        { "id": "d", "text": "Smart tips that actually help.", "scores": { "thinking": 2, "nerd": 1 } }
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "Your aesthetic:",
+      "options": [
+        { "id": "a", "text": "Maximalist chaos, but curated.", "scores": { "party": 1, "joy": 1, "sparkles": 1 } },
+        { "id": "b", "text": "Soft, clean, cozy.", "scores": { "sparkles": 2, "heart": 1 } },
+        { "id": "c", "text": "Bold, high-contrast, sporty.", "scores": { "fire": 2, "sunglasses": 1 } },
+        { "id": "d", "text": "Minimal, organized, useful.", "scores": { "thinking": 2, "nerd": 1 } }
+      ]
+    }
+  ]
+}

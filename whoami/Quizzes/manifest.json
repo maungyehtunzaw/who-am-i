@@ -18,6 +18,14 @@
     {
       "id": "heroes",
       "file": "quiz_heroes.json"
+    },
+    {
+      "id": "emoji",
+      "file": "quiz_emoji.json"
+    },
+    {
+      "id": "mbti",
+      "file": "quiz_mbti.json"
     }
   ]
 }
