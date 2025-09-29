@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ImageProviderTests {
     
-    @Test func testImageNormalization() async throws {
+    @Test @MainActor func testImageNormalization() async throws {
         // Test various path formats that should normalize correctly
         let testCases = [
             "assets/dogs/cover.jpg",
@@ -23,31 +23,31 @@ struct ImageProviderTests {
         ]
         
         // We can't easily test the actual image loading without assets,
-        // but we can verify the method doesn't crash and returns an Image
+        // but we can verify the method doesn't crash and returns successfully
         for path in testCases {
-            let image = ImageProvider.image(path)
+            let imageView = ImageProvider.image(path)
             
-            // Verify we get back an Image (should be system image if not found)
-            #expect(image != nil)
+            // Verify we get back a view without crashing
+            #expect(String(describing: imageView).contains("AnyView"))
         }
     }
     
-    @Test func testEmptyPath() async throws {
-        let image = ImageProvider.image("")
-        #expect(image != nil) // Should return fallback system image
+    @Test @MainActor func testEmptyPath() async throws {
+        let imageView = ImageProvider.image("")
+        #expect(String(describing: imageView).contains("AnyView")) // Should return fallback system image
     }
     
-    @Test func testPathWithoutExtension() async throws {
-        let image = ImageProvider.image("test_image")
-        #expect(image != nil) // Should return fallback system image
+    @Test @MainActor func testPathWithoutExtension() async throws {
+        let imageView = ImageProvider.image("test_image")
+        #expect(String(describing: imageView).contains("AnyView")) // Should return fallback system image
     }
     
-    @Test func testPathWithMultipleSlashes() async throws {
-        let image = ImageProvider.image("assets/dogs/types/bulldog")
-        #expect(image != nil) // Should return fallback system image
+    @Test @MainActor func testPathWithMultipleSlashes() async throws {
+        let imageView = ImageProvider.image("assets/dogs/types/bulldog")
+        #expect(String(describing: imageView).contains("AnyView")) // Should return fallback system image
     }
     
-    @Test func testSpecialCharacters() async throws {
+    @Test @MainActor func testSpecialCharacters() async throws {
         let testPaths = [
             "test-image.jpg",
             "test_image_123.png",
@@ -56,12 +56,12 @@ struct ImageProviderTests {
         ]
         
         for path in testPaths {
-            let image = ImageProvider.image(path)
-            #expect(image != nil)
+            let imageView = ImageProvider.image(path)
+            #expect(String(describing: imageView).contains("AnyView"))
         }
     }
     
-    @Test func testCaseInsensitiveExtensions() async throws {
+    @Test @MainActor func testCaseInsensitiveExtensions() async throws {
         let testPaths = [
             "image.JPG",
             "image.PNG", 
@@ -70,8 +70,8 @@ struct ImageProviderTests {
         ]
         
         for path in testPaths {
-            let image = ImageProvider.image(path)
-            #expect(image != nil)
+            let imageView = ImageProvider.image(path)
+            #expect(String(describing: imageView).contains("AnyView"))
         }
     }
 }

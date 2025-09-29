@@ -31,10 +31,7 @@ struct QuizListView: View {
                 } label: {
                     HStack(spacing: 12) {
                         ImageProvider.image(quiz.cover_image)
-                            .resizable()
                             .scaledToFill()
-                            .frame(width: 64, height: 64)
-                            .clipShape(RoundedRectangle(cornerRadius: 12))
                         VStack(alignment: .leading, spacing: 4) {
                             Text(quiz.title).font(.headline)
                             Text(quiz.subtitle).font(.subheadline).foregroundStyle(.secondary)

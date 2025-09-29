@@ -14,11 +14,8 @@ struct QuizResultView: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            ImageProvider.image(result.winningType.type_image)
-                .resizable().scaledToFit()
-                .frame(height: 200)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-                .padding(.top)
+            ImageProvider.image(quiz.cover_image)
+                .scaledToFill()
 
             Text("You are: \(result.winningType.emoji) \(result.winningType.name)")
                 .font(.title2).bold()

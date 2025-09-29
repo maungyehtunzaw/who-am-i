@@ -20,7 +20,6 @@ struct QuizIntroView: View {
             VStack(spacing: 16) {
                 // Cover + title
                 ImageProvider.image(quiz.cover_image)
-                    .resizable().scaledToFit()
                     .frame(height: 180)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .padding(.top)
@@ -41,7 +40,7 @@ struct QuizIntroView: View {
                     VStack(spacing: 12) {
                         Text("Your last result").font(.headline)
                         ImageProvider.image(type.type_image)
-                            .resizable().scaledToFit()
+                            .scaledToFit()
                             .frame(height: 120)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                         Text("\(type.emoji) \(type.name)")

@@ -4,7 +4,7 @@
   "subtitle": "Find your inner pup personality 🐶",
   "category": "personality",
   "version": "1.1.0",
-  "cover_image": "assets/dogs/cover.jpg",
+  "cover_image": "assets/dogs/cover_dogs.jpg",
   "types": [
     {
       "id": "labrador",

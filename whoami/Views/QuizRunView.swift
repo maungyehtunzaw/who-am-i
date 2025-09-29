@@ -23,7 +23,7 @@ struct QuizRunView: View {
             Text(q.text).font(.title3).bold()
 
             if let qi = q.question_image {
-                ImageProvider.image(qi).resizable().scaledToFit().clipShape(RoundedRectangle(cornerRadius: 12))
+                ImageProvider.image(qi).clipShape(RoundedRectangle(cornerRadius: 12))
             }
 
             ForEach(q.options) { opt in
@@ -33,8 +33,8 @@ struct QuizRunView: View {
                 } label: {
                     HStack(spacing: 12) {
                         if let oi = opt.option_image {
-                            ImageProvider.image(oi).resizable().scaledToFill()
-                                .frame(width: 44, height: 44).clipShape(RoundedRectangle(cornerRadius: 8))
+                            ImageProvider.image(oi)
+                            .scaledToFill()
                         }
                         Text(opt.text).foregroundStyle(.primary)
                         Spacer()

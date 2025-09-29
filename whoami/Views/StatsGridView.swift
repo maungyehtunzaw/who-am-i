@@ -44,9 +44,8 @@ struct StatsGridView: View {
                         } label: {
                             VStack(spacing: 8) {
                                 ImageProvider.image(entry.type.type_image)
-                                    .resizable().scaledToFill()
-                                    .frame(height: 110)
-                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                                    .frame(width: 40, height: 40)
+                                    .clipShape(Circle())
 
                                 Text("\(entry.type.emoji) \(entry.type.name)")
                                     .font(.subheadline).bold()

@@ -4,7 +4,7 @@
   "subtitle": "Discover the hue that matches your energy 🎨",
   "category": "personality",
   "version": "1.1.0",
-  "cover_image": "assets/colors/cover.jpg",
+  "cover_image": "assets/colors/cover_colors.jpg",
   "types": [
     { "id": "red",    "name": "Red",    "emoji": "🟥", "description": "Bold, passionate, action-oriented. You bring energy and momentum.", "type_image": "assets/colors/types/red.jpg" },
     { "id": "blue",   "name": "Blue",   "emoji": "🟦", "description": "Calm, reliable, thoughtful. People trust you with the big stuff.", "type_image": "assets/colors/types/blue.jpg" },

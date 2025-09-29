@@ -4,7 +4,7 @@
   "subtitle": "Your spirit critter awaits 🐾",
   "category": "personality",
   "version": "1.1.0",
-  "cover_image": "assets/animals/cover.jpg",
+  "cover_image": "assets/animals/cover_animals.jpg",
   "types": [
     { "id": "fox",     "name": "Fox",     "emoji": "🦊", "description": "Clever and adaptable. You find paths where others see walls.", "type_image": "assets/animals/types/fox.jpg" },
     { "id": "owl",     "name": "Owl",     "emoji": "🦉", "description": "Observant and wise. You notice patterns and think deeply.", "type_image": "assets/animals/types/owl.jpg" },

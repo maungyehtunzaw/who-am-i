@@ -511,7 +511,7 @@ _**Assistant (copilot/claude-sonnet-4)**_
 
 ---
 
-_**User (2025-09-27 13:05Z)**_
+_**User (2025-09-27 13:06Z)**_
 
 /Users/zzz/dev/whoami/whoami/whoami/Views/QuizIntroView.swift:93:37 Cannot find 'computed' in scope
 
@@ -520,7 +520,222 @@ _**User (2025-09-27 13:05Z)**_
 
 _**Assistant (copilot/claude-sonnet-4)**_
 
+I can see the issue in `QuizIntroView.swift` on line 93. The variable name `computed` is used but it should be `computedFromLast` based on the state variable declared at the top. Let me fix this:
 
+````swift
+// ...existing code...
+        .background(
+            NavigationLink(
+                destination: Group {
+                    if let result = computedFromLast {
+                        QuizResultView(quiz: quiz, result: result)
+                    } else {
+                        EmptyView()
+                    }
+                },
+                isActive: $showResult
+            ) { EmptyView() }
+        )
+// ...existing code...
+````
+
+The issue was on line 93 where `computed` should be `computedFromLast` to match the state variable declared at the top of the view:
+
+```swift
+@State private var computedFromLast: QuizResultComputed?
+```
+
+This should resolve the "Cannot find 'computed' in scope" error.
+
+---
+
+_**User (2025-09-27 13:27Z)**_
+
+cover_image , type_iamge ,question_image workable around assets or url ..? now url image not working
+
+---
+
+_**Assistant (copilot/claude-sonnet-4)**_
+
+I can see that in your `quiz_dogs.json` file, you're mixing local assets and external URLs for images. Looking at the file, I notice:
+
+1. **Local assets** (working): `"assets/dogs/cover.jpg"`, `"assets/dogs/types/labrador.jpeg"`
+2. **External URLs** (not working): The greyhound and poodle `type_image` fields use `https://` URLs
+
+The issue is that your `ImageProvider` service is likely only designed to handle local asset bundles, not remote URLs. Let me check your `ImageProvider` implementation and fix it to handle both local assets and remote URLs. I can see the issue! Your `ImageProvider` only handles local assets from the bundle. It doesn't support remote URLs. Let me update it to handle both local assets and remote URLs using `AsyncImage`: 
+```
+
+```
+Now I need to update the views that use `ImageProvider.image()` since the return type has changed from `Image` to `some View`. Let me check which views use the ImageProvider and update them: I need to update all the views to handle the new return type. Since the ImageProvider now returns `some View` instead of `Image`, I need to remove the `.resizable()` calls that are directly chained to it. Let me fix all the views: 
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+Let me check the TypeDetailView file to see the exact formatting: Now let me fix the TypeDetailView: 
+```
+
+```
+Now let me check QuizRunView for the exact formatting: Let me search more broadly in QuizRunView: Now let me read that section of QuizRunView to understand the context: Now I can fix the QuizRunView: 
+```
+
+```
+Now let me check if there are any errors by running the tests to see if everything compiles correctly: Let me try with a specific iPhone 16 simulator: 
+
+---
+
+_**User (2025-09-27 13:38Z)**_
+
+/Users/zzz/dev/whoami/whoami/whoami/Services/ImageProvider.swift:35:17 Function declares an opaque return type, but has no return statements in its body from which to infer an underlying type
+
+---
+
+_**Assistant (copilot/claude-sonnet-4)**_
+
+I can see the issue! The `ImageProvider.image()` function has an opaque return type `some View` but there's no return statement in the function body. Let me fix this by adding the proper return statements: I can see the issue! The function doesn't have explicit return statements for all the branches. Let me fix this by adding the proper return statements: 
+```
+
+```
+Now let's test the build to see if this resolves the opaque return type error: The build is failing because the `Group` container is being interpreted as a table column builder. Let me fix the `ImageProvider` by using a more specific return type: The issue is with the `Group` container. Let me fix this by using `@ViewBuilder` instead: 
+```
+
+```
+Now let's test the build again: 
+
+---
+
+_**User (2025-09-27 13:46Z)**_
+
+/Users/zzz/dev/whoami/whoami/whoami/Services/ImageProvider.swift:36:9 Generic parameter 'R' could not be inferred
+
+/Users/zzz/dev/whoami/whoami/whoami/Services/ImageProvider.swift:36:9 Generic parameter 'C' could not be inferred
+
+/Users/zzz/dev/whoami/whoami/whoami/Services/ImageProvider.swift:40:21 Cannot convert value of type 'AsyncImage<_ConditionalContent<Image, some View>>' to expected argument type 'TableColumn<R, C, Content, Label>'
+
+/Users/zzz/dev/whoami/whoami/whoami/Services/ImageProvider.swift:40:21 Generic parameter 'Content' could not be inferred
+
+/Users/zzz/dev/whoami/whoami/whoami/Services/ImageProvider.swift:40:21 Generic parameter 'Label' could not be inferred ///Users/zzz/dev/whoami/whoami/whoami/Services/ImageProvider.swift:55:13 Type '()' cannot conform to 'View'
+
+
+
+---
+
+_**Assistant (copilot/claude-sonnet-4)**_
+
+I see the issue! The problem is with the `@ViewBuilder` approach and the way I'm structuring the return statements. Let me fix the `ImageProvider` by using a simpler approach with `AnyView`: Let me check the current content of the ImageProvider file to see the exact formatting: Now I can see the exact structure. Let me fix it with the correct formatting: 
+```
+
+```
+Now let's test the build to see if this resolves the generic parameter inference issues: 
+
+---
+
+_**User (2025-09-27 13:49Z)**_
+
+/Users/zzz/dev/whoami/whoami/whoami/Views/QuizIntroView.swift:43:30 Value of type 'AnyView' has no member 'resizable'
+
+
+---
+
+_**Assistant (copilot/claude-sonnet-4)**_
+
+I see the issue! When I updated the `ImageProvider` to return `AnyView`, the views are still trying to call `.resizable()` on it, but `AnyView` doesn't have that method. I need to handle the resizable behavior inside the `ImageProvider` itself.
+
+Let me fix this by updating the `ImageProvider` to handle the resizable and frame modifiers internally: Let me read the current file to see the exact content: Let me read the rest of the file: Now I can see the current structure. The issue is that the views are still trying to call `.resizable()` on the `AnyView` returned from `ImageProvider.image()`. Since I've already made the images resizable inside the `ImageProvider`, I need to remove the `.resizable()` calls from all the views that use it.
+
+Let me fix all the views by removing the `.resizable()` calls: 
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+Some of the replacements failed. Let me check the specific lines in QuizIntroView, TypeDetailView, and see what the exact formatting is: Now I can fix the remaining files with the correct formatting: 
+```
+
+```
+Good! `QuizIntroView.swift` was fixed. Let me check if `TypeDetailView.swift` actually has a `.resizable()` call: Now let me check if there's a "computed" error by searching for any usage of computed properties or the word "computed": I see the issue now - it's likely a reference to `QuizResultComputed` or similar that's causing the error. Let me check if there's an issue in the `QuizModels.swift` file: Let me see the rest of the file: Let me check if there's a `QuizResultComputed` type defined anywhere: Let me verify the `QuizScoring.swift` structure: The structure looks correct. Let me try to build the project to see the exact error: Let me use a specific simulator from the list: 
+
+---
+
+_**User (2025-09-29 05:22Z)**_
+
+/Users/zzz/dev/whoami/whoami/whoami/Views/QuizRunView.swift:36:53 Value of optional type 'String?' must be unwrapped to a value of type 'String'
+
+
+---
+
+_**Assistant (copilot/claude-sonnet-4)**_
+
+I need to check the current content of `QuizRunView.swift` to see the specific line 36 that's causing the optional unwrapping error. I can see the issue! On line 37, there's a call to `ImageProvider.image(opt.option_image)` but this should be using the unwrapped value `oi` instead of the optional `opt.option_image`. Let me fix this: 
+```
+
+```
+Now let's test the build to see if this resolves the optional unwrapping error: Let's use one of the available iPhone 16 simulators with the correct ID: 
+
+---
+
+_**User (2025-09-29 05:22Z)**_
+
+/Users/zzz/dev/whoami/whoami/whoamiTests/ImageProviderTests.swift:28:39 Main actor-isolated static method 'image' cannot be called from outside of the actor; this is an error in the Swift 6 language mode
+
+/Users/zzz/dev/whoami/whoami/whoamiTests/ImageProviderTests.swift:31:27 Comparing non-optional value of type 'AnyView' to 'nil' always returns true
+
+/Users/zzz/dev/whoami/whoami/whoamiTests/ImageProviderTests.swift:36:35 Main actor-isolated static method 'image' cannot be called from outside of the actor; this is an error in the Swift 6 language mode
+
+/Users/zzz/dev/whoami/whoami/whoamiTests/ImageProviderTests.swift:37:23 Comparing non-optional value of type 'AnyView' to 'nil' always returns true
+
+/Users/zzz/dev/whoami/whoami/whoamiTests/ImageProviderTests.swift:41:35 Main actor-isolated static method 'image' cannot be called from outside of the actor; this is an error in the Swift 6 language mode
+
+/Users/zzz/dev/whoami/whoami/whoamiTests/ImageProviderTests.swift:42:23 Comparing non-optional value of type 'AnyView' to 'nil' always returns true
+
+/Users/zzz/dev/whoami/whoami/whoamiTests/ImageProviderTests.swift:46:35 Main actor-isolated static method 'image' cannot be called from outside of the actor; this is an error in the Swift 6 language mode
+
+/Users/zzz/dev/whoami/whoami/whoamiTests/ImageProviderTests.swift:47:23 Comparing non-optional value of type 'AnyView' to 'nil' always returns true
+
+/Users/zzz/dev/whoami/whoami/whoamiTests/ImageProviderTests.swift:59:39 Main actor-isolated static method 'image' cannot be called from outside of the actor; this is an error in the Swift 6 language mode
+
+/Users/zzz/dev/whoami/whoami/whoamiTests/ImageProviderTests.swift:60:27 Comparing non-optional value of type 'AnyView' to 'nil' always returns true
+
+/Users/zzz/dev/whoami/whoami/whoamiTests/ImageProviderTests.swift:73:39 Main actor-isolated static method 'image' cannot be called from outside of the actor; this is an error in the Swift 6 language mode
+
+/Users/zzz/dev/whoami/whoami/whoamiTests/ImageProviderTests.swift:74:27 Comparing non-optional value of type 'AnyView' to 'nil' always returns true
+ // update test depend on update image provider
+
+---
+
+_**Assistant (copilot/claude-sonnet-4)**_
+
+I need to fix the ImageProvider test issues. Let me first examine the current test file and then the ImageProvider to understand the changes needed. Now let me check the current ImageProvider implementation: I can see the issues:
+
+1. The ImageProvider's `image` method needs to be marked with `@MainActor` to handle Swift 6 concurrency
+2. The tests are comparing `AnyView` to `nil`, but `AnyView` is not optional, so these comparisons don't make sense
+3. The tests need to run on the main actor to call the ImageProvider method
+
+Let me fix both the ImageProvider and the tests: 
+```
+
+```
+
+```
+
+```
+Now let's run the tests to verify our fixes work: 
 
 ---
 

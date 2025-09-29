@@ -23,7 +23,6 @@ struct TypeDetailView: View {
         ScrollView {
             VStack(spacing: 16) {
                 ImageProvider.image(type.type_image)
-                    .resizable().scaledToFit()
                     .frame(height: 220)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .padding(.top)
