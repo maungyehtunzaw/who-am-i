@@ -11,16 +11,7 @@ struct QuizListView: View {
     @State private var errorText: String?
 
     var body: some View {
-        if #available(iOS 16.0, *) {
-            NavigationStack {
-                quizListContent
-            }
-        } else {
-            NavigationView {
-                quizListContent
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
-        }
+        quizListContent
     }
     
     private var quizListContent: some View {
@@ -50,9 +41,11 @@ struct QuizListView: View {
             do { quizzes = try QuizLoader.shared.loadAllQuizzes() }
             catch { errorText = String(describing: error) }
         }
-        .overlay {
+        .alert("Error", isPresented: .constant(errorText != nil)) {
+            Button("OK") { errorText = nil }
+        } message: {
             if let e = errorText {
-                Text(e).foregroundStyle(.red).padding()
+                Text(e)
             }
         }
     }

@@ -14,31 +14,129 @@ struct AppRoot: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             // Home Tab
-            QuizListView()
-                .tabItem {
-                    Image(systemName: selectedTab == 0 ? "house.fill" : "house")
-                    Text("Home")
+            Group {
+                if #available(iOS 16.0, *) {
+                    NavigationStack {
+                        QuizListView()
+                    }
+                } else {
+                    NavigationView {
+                        QuizListView()
+                    }
+                    .navigationViewStyle(StackNavigationViewStyle())
                 }
-                .tag(0)
+            }
+            .tabItem {
+                Image(systemName: selectedTab == 0 ? "house.fill" : "house")
+                Text("Home")
+            }
+            .tag(0)
             
-            // Profile Tab - For now, show a simple profile placeholder
-            ProfilePlaceholderView()
-                .tabItem {
-                    Image(systemName: selectedTab == 1 ? "person.fill" : "person")
-                    Text("Profile")
+            // Profile Tab
+            Group {
+                if #available(iOS 16.0, *) {
+                    NavigationStack {
+                        SimpleProfileView()
+                    }
+                } else {
+                    NavigationView {
+                        SimpleProfileView()
+                    }
+                    .navigationViewStyle(StackNavigationViewStyle())
                 }
-                .tag(1)
+            }
+            .tabItem {
+                Image(systemName: selectedTab == 1 ? "person.fill" : "person")
+                Text("Profile")
+            }
+            .tag(1)
             
-            // Settings Tab - For now, show a simple settings placeholder
-            SettingsPlaceholderView()
-                .tabItem {
-                    Image(systemName: selectedTab == 2 ? "gear.circle.fill" : "gear")
-                    Text("Settings")
+            // Settings Tab
+            Group {
+                if #available(iOS 16.0, *) {
+                    NavigationStack {
+                        SimpleSettingsView()
+                    }
+                } else {
+                    NavigationView {
+                        SimpleSettingsView()
+                    }
+                    .navigationViewStyle(StackNavigationViewStyle())
                 }
-                .tag(2)
+            }
+            .tabItem {
+                Image(systemName: selectedTab == 2 ? "gear.circle.fill" : "gear")
+                Text("Settings")
+            }
+            .tag(2)
         }
         .preferredColorScheme(isDarkMode ? .dark : .light)
         .accentColor(.blue)
+    }
+}
+
+// Simple Profile View
+struct SimpleProfileView: View {
+    @AppStorage("userName") private var userName = "Guest"
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Image(systemName: "person.circle.fill")
+                .font(.system(size: 80))
+                .foregroundColor(.blue)
+            
+            Text("Welcome, \(userName)!")
+                .font(.title2)
+                .fontWeight(.medium)
+            
+            Text("Profile features available")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+            
+            Spacer()
+        }
+        .padding()
+        .navigationTitle("Profile")
+    }
+}
+
+// Simple Settings View  
+struct SimpleSettingsView: View {
+    @AppStorage("isDarkMode") private var isDarkMode = false
+    
+    var body: some View {
+        List {
+            Section("Appearance") {
+                HStack {
+                    Image(systemName: isDarkMode ? "moon.fill" : "sun.max.fill")
+                        .foregroundColor(isDarkMode ? .purple : .orange)
+                        .frame(width: 24)
+                    
+                    Text("Dark Mode")
+                    
+                    Spacer()
+                    
+                    Toggle("", isOn: $isDarkMode)
+                        .labelsHidden()
+                }
+            }
+            
+            Section("About") {
+                HStack {
+                    Image(systemName: "info.circle.fill")
+                        .foregroundColor(.blue)
+                        .frame(width: 24)
+                    
+                    Text("WhoAmI Quiz App")
+                    
+                    Spacer()
+                    
+                    Text("v1.0")
+                        .foregroundColor(.secondary)
+                }
+            }
+        }
+        .navigationTitle("Settings")
     }
 }
 

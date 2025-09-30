@@ -11,6 +11,7 @@ import UIKit
 struct QuizResultView: View {
     let quiz: Quiz
     let result: QuizResultComputed
+    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         VStack(spacing: 16) {
@@ -36,8 +37,11 @@ struct QuizResultView: View {
                 .buttonStyle(.bordered)
             }
 
-            NavigationLink("Done", destination: QuizListView())
-                .padding(.bottom)
+            Button("Done") {
+                dismiss()
+            }
+            .buttonStyle(.borderedProminent)
+            .padding(.bottom)
         }
         .padding()
         .navigationBarBackButtonHidden(true)

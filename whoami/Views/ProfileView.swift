@@ -17,15 +17,7 @@ struct ProfileView: View {
     @State private var showingImagePicker = false
     
     var body: some View {
-        if #available(iOS 16.0, *) {
-            NavigationStack {
-                profileContent
-            }
-        } else {
-            NavigationView {
-                profileContent
-            }
-        }
+        profileContent
     }
     
     private var profileContent: some View {

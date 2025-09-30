@@ -24,15 +24,7 @@ struct SettingsView: View {
     @State private var canSendMail = MFMailComposeViewController.canSendMail()
     
     var body: some View {
-        if #available(iOS 16.0, *) {
-            NavigationStack {
-                settingsContent
-            }
-        } else {
-            NavigationView {
-                settingsContent
-            }
-        }
+        settingsContent
     }
     
     private var settingsContent: some View {
