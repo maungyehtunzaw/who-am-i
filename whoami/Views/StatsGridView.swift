@@ -20,8 +20,8 @@ struct StatsGridView: View {
             }
     }
 
-    private let cols = [GridItem(.flexible(), spacing: 12),
-                        GridItem(.flexible(), spacing: 12)]
+    private let cols = [GridItem(.flexible(), spacing: 8),
+                        GridItem(.flexible(), spacing: 8)]
 
     var body: some View {
         ScrollView {
@@ -42,23 +42,42 @@ struct StatsGridView: View {
                         NavigationLink {
                             TypeDetailView(quiz: quiz, stats: stats, type: entry.type)
                         } label: {
-                            VStack(spacing: 8) {
-                                ImageProvider.image(entry.type.type_image)
-                                    .frame(width: 40, height: 40)
-                                    .clipShape(Circle())
-
-                                Text("\(entry.type.emoji) \(entry.type.name)")
-                                    .font(.subheadline).bold()
-                                    .multilineTextAlignment(.center)
-                                    .lineLimit(1)
-
-                                Text("× \(entry.count)")
-                                    .font(.footnote)
-                                    .padding(.horizontal, 8).padding(.vertical, 4)
-                                    .background(Color(.tertiarySystemBackground))
-                                    .clipShape(Capsule())
+                            VStack(spacing: 0) {
+                                ZStack(alignment: .topTrailing) {
+                                    Rectangle()
+                                        .fill(Color(.tertiarySystemBackground))
+                                        .frame(height: 100)
+                                        .overlay(
+                                            ImageProvider.image(entry.type.type_image)
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                        )
+                                    
+                                    Text("\(entry.count)")
+                                        .font(.caption).bold()
+                                        .foregroundColor(.white)
+                                        .frame(width: 20, height: 20)
+                                        .background(Color.red)
+                                        .clipShape(Circle())
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.white, lineWidth: 1)
+                                        )
+                                        .offset(x: -8, y: 8)
+                                }
+                                
+                                VStack(spacing: 4) {
+                                    Text("\(entry.type.emoji) \(entry.type.name)")
+                                        .font(.subheadline).bold()
+                                        .multilineTextAlignment(.center)
+                                        .lineLimit(2)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                }
+                                .frame(height: 50)
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 8)
                             }
-                            .padding(10)
+                            .frame(width: 160, height: 170)
                             .background(Color(.secondarySystemBackground))
                             .clipShape(RoundedRectangle(cornerRadius: 16))
                         }

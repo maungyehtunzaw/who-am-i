@@ -11,70 +11,70 @@
       "name": "Face with Tears of Joy",
       "emoji": "😂",
       "description": "Playful, hilarious, meme-core energy. You lighten every room.",
-      "type_image": "assets/emoji/types/joy.jpg"
+      "type_image": "https://emojiisland.com/cdn/shop/products/Tears_of_Joy_Emoji_8afc0e22-e3d4-4b07-be7f-77296331c687_large.png?v=1571606036"
     },
     {
       "id": "heart",
       "name": "Red Heart",
       "emoji": "❤️",
       "description": "Warm, loyal, and caring. You lead with kindness and connection.",
-      "type_image": "assets/emoji/types/heart.jpg"
+      "type_image": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/red-heart.png"
     },
     {
       "id": "fire",
       "name": "Fire",
       "emoji": "🔥",
       "description": "Ambitious and high-energy. When you commit, you go all in.",
-      "type_image": "assets/emoji/types/fire.jpg"
+      "type_image": "https://images.emojiterra.com/google/android-11/512px/1f525.png"
     },
     {
       "id": "sparkles",
       "name": "Sparkles",
       "emoji": "✨",
       "description": "Optimistic, whimsical, and aesthetic-minded. You add polish to everything.",
-      "type_image": "assets/emoji/types/sparkles.jpg"
+      "type_image": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/sparkles.png"
     },
     {
       "id": "sunglasses",
       "name": "Smiling Face with Sunglasses",
       "emoji": "😎",
       "description": "Chill confidence. You stay cool under pressure and keep things fun.",
-      "type_image": "assets/emoji/types/sunglasses.jpg"
+      "type_image": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/sunglasses.png"
     },
     {
       "id": "pleading",
       "name": "Pleading Face",
       "emoji": "🥺",
       "description": "Sweet, gentle, and persuasive. People find it hard to say no to you.",
-      "type_image": "assets/emoji/types/pleading.jpg"
+      "type_image": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/pleading.png"
     },
     {
       "id": "party",
       "name": "Partying Face",
       "emoji": "🥳",
       "description": "Celebratory and social. You’re the spark that gets everyone together.",
-      "type_image": "assets/emoji/types/party.jpg"
+      "type_image": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/party.png"
     },
     {
       "id": "thinking",
       "name": "Thinking Face",
       "emoji": "🤔",
       "description": "Curious analyst. You ask smart questions and love solving puzzles.",
-      "type_image": "assets/emoji/types/thinking.jpg"
+      "type_image": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/thinking.png"
     },
     {
       "id": "loudly_crying",
       "name": "Loudly Crying Face",
       "emoji": "😭",
       "description": "Big feelings, big reactions—dramatic in the best way. You feel deeply.",
-      "type_image": "assets/emoji/types/loudly_crying.jpg"
+      "type_image": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/loudly_crying.png"
     },
     {
       "id": "nerd",
       "name": "Nerd Face",
       "emoji": "🤓",
       "description": "Enthusiastic learner, detail lover, wholesome geek chic.",
-      "type_image": "assets/emoji/types/nerd.jpg"
+      "type_image": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/nerd.png"
     }
   ],
   "questions": [
